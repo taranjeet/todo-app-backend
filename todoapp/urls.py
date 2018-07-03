@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('token-auth/', obtain_jwt_token),
     url(r'^simple/', include(('simple.urls', 'simple'),
-        namespace='simple',))
+        namespace='simple',)),
+    path('authdemo/', include('authdemo.urls'))
+
 ]
